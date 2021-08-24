@@ -1,20 +1,23 @@
-import { useEffect, useState } from 'react';
+import logo from './logo.svg';
 import './App.css';
-import Navbar from './Navbar'
 
 function App() {
-  const [allParks, setAllParks] = useState([])
-
-  useEffect(() => {
-    fetch('https://developer.nps.gov/api/v1/parks?limit=465&api_key=pqoHqZvfTYo5q5m2iP19obTQxYClyv4qi9IAeOaI')
-    .then(r => r.json())
-    .then(parkData => setAllParks(parkData.data))
-  }, [])
-  
   return (
     <div className="App">
-      <Navbar />
-      <h1>hello</h1>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
