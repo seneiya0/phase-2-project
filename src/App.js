@@ -2,7 +2,7 @@
 import './App.css';
 import React, {useEffect, useState} from 'react';
 // import ParksList from './ParksList';
-//import ParkCard from './ParkCard';
+// import ParkCard from './ParkCard';
 
 function App() {
 const [allParks, setAllParks] = useState([])
@@ -14,18 +14,17 @@ const [allParks, setAllParks] = useState([])
     .then(allParksData => setAllParks(allParksData.data))
     
   }, [])
- 
-  console.log(allParks)
 
+  const eachPark = allParks.map((park) => console.log(park.images[0].url)) //this is each park
+  
+  
+  
   return (
-    <div >
-       {/* <header className="park-list">
-           <section>
-           <ParksList allParks={allParks}  />
-           </section>
-       </header> */}
-     </div>
-    )
+    <div>
+      
+       {/* <div><ParksList eachPark={eachPark} /></div> */}
+    </div>
+    );
   }
 
 

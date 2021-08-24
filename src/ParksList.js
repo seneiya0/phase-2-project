@@ -1,15 +1,15 @@
 // import React from 'react';
 // import ParkCard from './ParkCard'
 
-// function ParksList({park}) {
+// function ParksList({eachPark}) {
 
 //     return(
 //         <main>
 //             <div>
 //                 <ParkCard 
-//                 key={park.id}
-//                 image={park.image}
-//                 name={park.name} />
+//                 key={eachPark.id}
+//                 image={eachPark.images[0].url}
+//                 name={eachPark.name} />
 //             </div>
 //         </main>
 //     )

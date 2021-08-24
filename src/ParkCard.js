@@ -1,20 +1,20 @@
-// function ParkCard({image, name, fees, events, address}) {
+function ParkCard({image, name, address}) {
 
-//     return (
-//         //will need to handle a click event to display full info in a ParkContainer
-// <div className="park">
-//     {image}
-//     <h4 className="description">
-//         {name} |  {address} 
-//     </h4>
+    return (
+        //will need to handle a click event to display full info in a ParkContainer
+<div>
+    {image}
+    <h4>
+        {name} |  {address} 
+    </h4>
 
-// </div>
+</div>
         
-//     )
-// }
+    )
+}
 
 
 
+// allParks.map((park) => console.log(park.images[0].url)) //this is each park's 1st image url
 
-
-// export default ParkCard
+export default ParkCard
