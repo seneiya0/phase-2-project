@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React, {useEffect, useState} from 'react';
 import ParksList from './ParksList';
+//import ParkCard from './ParkCard';
 
 function App() {
  const [allParks, setAllParks] = useState([])
@@ -10,33 +11,21 @@ function App() {
 
     fetch('https://developer.nps.gov/api/v1/parks?limit=465&api_key=b1KSaT3gid8CxzHNe1SNYD6ZGN7aCcNdWWgbTVY9')
     .then((r) => r.json())
-    .then(allParksData => setAllParks(allParksData))
+    .then(allParksData => console.log(Object.keys(setAllParks(allParksData.data))))
   }, [])
 
-
+  // park={allParks.data.map((park) => park.data)}
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {allParks.map((park) =>  park={park})}
+       <header className="park-list">
+           <section>
+           <ParksList allParks={allParks}  />
+           </section>
+       </header>
+     </div>
+    )
+  }
 
-        </p>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
 export default App;
