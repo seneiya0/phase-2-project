@@ -1,18 +1,19 @@
-// import React from 'react';
-// import ParkCard from './ParkCard'
+import React from 'react';
+import ParkCard from './ParkCard'
 
-// function ParksList({eachPark}) {
+function ParksList({allParks}) {
 
-//     return(
-//         <main>
-//             <div>
-//                 <ParkCard 
-//                 key={eachPark.id}
-//                 image={eachPark.images[0].url}
-//                 name={eachPark.name} />
-//             </div>
-//         </main>
-//     )
-// }
+    const eachPark = allParks.map((park) =>  <ParkCard 
+    key={park.id}
+    park={park} />)
 
-// export default ParksList
+    return(
+        <main>
+            <div>
+               {eachPark}
+            </div>
+        </main>
+    )
+}
+
+export default ParksList

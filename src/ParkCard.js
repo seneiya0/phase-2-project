@@ -1,11 +1,11 @@
-function ParkCard({image, name, address}) {
+function ParkCard({park}) {
 
     return (
         //will need to handle a click event to display full info in a ParkContainer
 <div>
-    {image}
+    <img src={park.images[0].url} alt={park.images[0].altText} />
     <h4>
-        {name} |  {address} 
+        {park.name} |  {park.address} 
     </h4>
 
 </div>
