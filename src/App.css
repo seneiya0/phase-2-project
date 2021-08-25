@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,11 +17,19 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.park-card {
+  position: relative;
+  width: 400px;
+  background-repeat: no-repeat;
+  margin: 2%;
+  padding: 1%;
+  outline: #004700 solid;
+  transition: 0.75s;
+  opacity: 1;
+
 }
+
+.park-card:hover {
+  transform: scale(1.05);
+}
+
