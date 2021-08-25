@@ -33,3 +33,7 @@
   transform: scale(1.05);
 }
 
+.d-flex {
+  width: 300px;
+}
+
