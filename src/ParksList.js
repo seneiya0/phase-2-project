@@ -3,9 +3,11 @@ import ParkCard from './ParkCard'
 
 function ParksList({allParks}) {
 
-    const eachPark = allParks.map((park) =>  <ParkCard 
+    const eachPark = allParks.map((park) =>  
+    <ParkCard 
     key={park.id}
-    park={park} />)
+    park={park} 
+    />)
 
     return(
         <main>
