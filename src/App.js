@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './Navbar'
 import ParksList from './ParksList'
-import ParkPage from './ParkPage';
-
 
 function App() {
   const [allParks, setAllParks] = useState([])
@@ -16,14 +14,24 @@ function App() {
       setAllParks(parkData.data)
       setDuplicate(parkData.data)})
   }, [])
-
-// console.log(allParks)
+console.log(allParks)
 
 function searchPark(text){
   const searchResults = duplicate.filter(park => {
     return park.addresses[0].stateCode.includes(text)
   })
   setAllParks(searchResults)
+}
+
+  return (
+    <div className="App">
+      <Navbar searchPark={searchPark}/>
+      <div className='park-page'>
+        <ParksList allParks={allParks} />
+
+      </div>
+    </div>
+  );
 }
 
 function showParkInfo(park){
