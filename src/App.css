@@ -21,7 +21,7 @@
   position: relative;
   width: 400px;
   background-repeat: no-repeat;
-  margin: 2%;
+  margin: 5%;
   padding: 1%;
   outline: #004700 solid;
   transition: 0.75s;
@@ -35,5 +35,10 @@
 
 .d-flex {
   width: 300px;
+}
+
+.park-page{
+  display: flex;
+  flex-direction: row;
 }
 

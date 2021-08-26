@@ -1,6 +1,6 @@
 import * as ReactBootStrap from 'react-bootstrap';
 
-function Navbar(){
+function Navbar({searchPark}){
   return (
     <ReactBootStrap.Navbar bg="success" expand="sm">
   <ReactBootStrap.Container>
@@ -17,6 +17,7 @@ function Navbar(){
                 className="mr-2"
                 aria-label="Search"
                 maxLength='2'
+                onChange={(e) => searchPark(e.target.value)}
               />
               <ReactBootStrap.Button variant="outline-light" type='submit' onSubmit={null}>Search</ReactBootStrap.Button>
     </ReactBootStrap.Form>
