@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './Navbar'
 import ParksList from './ParksList'
+import ParkPage from './ParkPage';
 
 function App() {
   const [allParks, setAllParks] = useState([])
   const [duplicate, setDuplicate] = useState([])
+  const [aPark, setAPark] = useState({})
+
 
   useEffect(() => {
     fetch('https://developer.nps.gov/api/v1/parks?limit=465&api_key=pqoHqZvfTYo5q5m2iP19obTQxYClyv4qi9IAeOaI')
@@ -14,7 +17,7 @@ function App() {
       setAllParks(parkData.data)
       setDuplicate(parkData.data)})
   }, [])
-console.log(allParks)
+// console.log(allParks)
 
 function searchPark(text){
   const searchResults = duplicate.filter(park => {
@@ -23,28 +26,16 @@ function searchPark(text){
   setAllParks(searchResults)
 }
 
-  return (
-    <div className="App">
-      <Navbar searchPark={searchPark}/>
-      <div className='park-page'>
-        <ParksList allParks={allParks} />
-
-      </div>
-    </div>
-  );
-}
-
 function showParkInfo(park){
-  allParks.map((park) => setAPark(park))
+  setAPark(park) 
 }
-
 
   return (
     <div className="App">      
       <Navbar searchPark={searchPark}/>
       <div className='park-page'>
-        <ParksList allParks={allParks} />
-        <ParkPage allParks={allParks} />
+        <ParksList allParks={allParks} showParkInfo={showParkInfo} />
+        <ParkPage aPark={aPark} />
       </div>
     </div>
   )};
