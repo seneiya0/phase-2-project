@@ -42,3 +42,11 @@
   flex-direction: row;
 }
 
+.park-div{
+  position: relative;
+  text-align: center;
+  margin: 5%;
+  margin-left: 20%;
+  width: 60%;
+}
+

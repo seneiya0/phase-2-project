@@ -9,7 +9,7 @@ function Navbar({searchPark}){
     <ReactBootStrap.Navbar.Collapse id="basic-navbar-nav">
       <ReactBootStrap.Nav className="me-auto">
         <ReactBootStrap.Nav.Link href="localhost:3000"><strong> Home </strong></ReactBootStrap.Nav.Link>
-        <ReactBootStrap.Nav.Link href=" "> <strong>All Parks</strong></ReactBootStrap.Nav.Link>
+        <ReactBootStrap.Nav.Link href=""> <strong>All Parks</strong></ReactBootStrap.Nav.Link>
             <ReactBootStrap.Form className="d-flex">
               <ReactBootStrap.FormControl
                 type="search"
@@ -19,7 +19,7 @@ function Navbar({searchPark}){
                 maxLength='2'
                 onChange={(e) => searchPark(e.target.value)}
               />
-              <ReactBootStrap.Button variant="outline-light" type='submit' onSubmit={null}>Search</ReactBootStrap.Button>
+              <ReactBootStrap.Button variant="outline-light" type='submit' >Search</ReactBootStrap.Button>
     </ReactBootStrap.Form>
       </ReactBootStrap.Nav>
     </ReactBootStrap.Navbar.Collapse>
