@@ -1,5 +1,5 @@
 //this page will display after clicking a ParkCard. Park info here will include detailed description, Events, Fees,
-// import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 
 
@@ -7,7 +7,7 @@ function ParkPage({aPark}) {
        
 const parkInfo = {
     name: aPark.fullName,
-    hours: aPark.operatingHours,
+    // hours: aPark.operatingHours,
     // fees: aPark.entranceFees[0],
     description: aPark.description,
     // activities: aPark.activities,
@@ -28,7 +28,7 @@ const parkInfo = {
             {/* <p>{parkInfo.fees}</p> */}
             <p> {parkInfo.designation}</p>
             <a href={parkInfo.url}>Visit Park's site for latest info</a>
-            <p>{parkInfo.hours}</p>
+            {/* <p>{parkInfo.hours}</p> */}
            
 
         </div>
