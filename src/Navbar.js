@@ -21,8 +21,7 @@ function reload (){
                 className="mr-2"
                 aria-label="Search"
                 maxLength='2'
-                onChange={(e) => searchPark(e.target.value.toUpperCase(), 
-                  e.preventDefault())}
+                onChange={(e) => searchPark(e.target.value.toUpperCase())}
               />
               <ReactBootStrap.Button variant="outline-light" type='submit'>Search</ReactBootStrap.Button>
     </ReactBootStrap.Form>
