@@ -18,7 +18,7 @@ function Navbar({searchPark}){
                 className="mr-2"
                 aria-label="Search"
                 maxLength='2'
-                onChange={(e) => searchPark(e.target.value)}
+                onChange={(e) => searchPark(e.target.value.toUpperCase())}
               />
               {/* <ReactBootStrap.Button variant="outline-light" type='submit' onSubmit={(e)=> e.preventDefault()}>Search</ReactBootStrap.Button> */}
     </ReactBootStrap.Form>
