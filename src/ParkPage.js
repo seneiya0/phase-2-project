@@ -7,8 +7,8 @@ function ParkPage({aPark}) {
        
 const parkInfo = {
     name: aPark.fullName,
-    // hours: aPark.operatingHours,
-    // fees: aPark.entranceFees,
+    hours: aPark.operatingHours,
+    // fees: aPark.entranceFees[0],
     description: aPark.description,
     // activities: aPark.activities,
     designation: aPark.designation,
@@ -25,9 +25,10 @@ const parkInfo = {
         <div className="park-div">
             <h1>{parkInfo.name}</h1>
             <p>{parkInfo.description}</p>
+            {/* <p>{parkInfo.fees}</p> */}
             <p> {parkInfo.designation}</p>
             <a href={parkInfo.url}>Visit Park's site for latest info</a>
-            {/* <p>{parkInfo.hours}</p> */}
+            <p>{parkInfo.hours}</p>
            
 
         </div>

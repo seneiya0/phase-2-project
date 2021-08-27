@@ -1,5 +1,6 @@
 import React from 'react';
 import ParkCard from './ParkCard'
+// import ParkPage from './ParkPage';
 
 function ParksList({allParks, showParkInfo}) {
 
